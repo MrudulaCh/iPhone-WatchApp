@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iphoneWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="152" alignment="left" backgroundImage="cart1" id="gFS-av-04e">
+                            <connections>
+                                <action selector="Imageclick" destination="AgC-eL-Hgc" id="rNL-0j-rYn"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--page2-->
+        <scene sceneID="1y0-UE-kT2">
+            <objects>
+                <controller identifier="page2" id="yef-4r-Eh2" customClass="OptionsController" customModule="iphoneWatch_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Shop Now" id="yte-2j-cZx">
+                            <color key="titleColor" red="0.44542098720060552" green="1" blue="0.33486206769707783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="shopNow" destination="yef-4r-Eh2" id="hrf-B5-AIX"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Pick Up" id="LCF-5f-Qm0">
+                            <color key="titleColor" red="1" green="0.38327723654778156" blue="0.21176218989107765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="pickUp" destination="yef-4r-Eh2" id="PPy-Y2-Aus"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Call Me" id="180-JR-dK6">
+                            <color key="titleColor" red="0.99138671509664633" green="1" blue="0.39682664806985546" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="callMe" destination="yef-4r-Eh2" id="t1Y-kI-Sbo"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="483" y="345"/>
+        </scene>
+        <!--page3-->
+        <scene sceneID="IQT-5t-5Yc">
+            <objects>
+                <controller identifier="page3" id="RIi-Kb-nKb" customClass="DetailsController" customModule="iphoneWatch_WatchKit_Extension">
+                    <items>
+                        <label width="134" height="78" alignment="left" text="Order Placed !!!!" id="Xml-aM-YV0">
+                            <color key="textColor" red="1" green="0.88711110330945586" blue="0.10473541083196647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <label alignment="left" text="Code:" id="9Ls-bf-D0g"/>
+                        <label width="136" alignment="left" text="Label" id="3FE-bv-OfZ">
+                            <color key="textColor" red="0.4094144897161951" green="1" blue="0.97251780024225876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="orderCode" destination="3FE-bv-OfZ" id="Lbw-bE-GZt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="780" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="iphoneWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
